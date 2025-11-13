@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         SONAR_HOST = "http://localhost:9000"
-        SLACK_CHANNEL = '#alerts'
-        SLACK_CREDENTIALS = 'devsecops-slack'
+        SLACK_CHANNEL = '#all-devsecops-team'
+        SLACK_CREDENTIALS = 'slack'
         GIT_URL = "https://github.com/takwa-laffet/calculatrice.git"
         GIT_BRANCH = "main"
         SONAR_PROJECT_KEY = "Calculatrice"
