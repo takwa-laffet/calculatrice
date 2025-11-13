@@ -166,7 +166,7 @@ pipeline {
             }
         }
 
-        stage('Nikto Scan') {
+        stage('DAST - Nikto Scan') {
             steps {
                 sh """
                     nikto -h ${APP_URL} -o nikto-report.html -Format htm || true
@@ -176,7 +176,7 @@ pipeline {
             }
         }
 
-        stage('OWASP ZAP Scan') {
+        stage('DAST - OWASP ZAP Scan') {
             steps {
                 sh '''
                     docker run --rm --user root --network devsecops-net \
