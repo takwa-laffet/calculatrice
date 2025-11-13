@@ -230,7 +230,6 @@ EOF
                              "• Gitleaks Issues: ${gitleaksSummary}\n" +
                              "• Snyk Vulnerabilities: ${snykSummary}\n" +
                              "• Trivy Alerts: ${trivySummary}\n" +
-                             "• ZAP Alerts: ${zapSummary}\n" +
                              "• Nikto Alerts: ${niktoSummary}\n" +
                              "• Build & Deploy Successful\nLogs: ${BUILD_URL}",
                     tokenCredentialId: env.SLACK_CREDENTIALS
