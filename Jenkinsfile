@@ -221,7 +221,6 @@ EOF
                 def gitleaksSummary = fileExists('gitleaks-report.json') ? sh(script: "jq -r '. | length' gitleaks-report.json || echo 0", returnStdout: true).trim() : "0"
                 def snykSummary = fileExists('snyk-report.json') ? sh(script: "jq -r '.vulnerabilities | length' snyk-report.json || echo 0", returnStdout: true).trim() : "0"
                 def trivySummary = fileExists('trivy-report.html') ? sh(script: "grep -c 'CRITICAL\\|HIGH' trivy-report.html || echo 0", returnStdout: true).trim() : "0"
-                def zapSummary = fileExists('zap-report.html') ? sh(script: "grep -c -i 'High\\|Medium\\|Low' zap-report.html || echo 0", returnStdout: true).trim() : "0"
                 def niktoSummary = fileExists('nikto-report.html') ? sh(script: "grep -c 'OSVDB' nikto-report.html || echo 0", returnStdout: true).trim() : "0"
 
                 slackSend(
